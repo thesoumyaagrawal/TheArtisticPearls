@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300&family=Jost:wght@300;400&family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Heebo:wght@100;200;300&family=Jost:wght@300;400&family=Rubik:wght@400;500;700&display=swap');
+
+
+.navbar {
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    padding: 0%;
+    font-family: 'DM Serif Display', serif;
+    font-style: 'DM Serif Display';
+}
+.heading {
+    color: #292f36;
+    font-weight: 400;
+    padding: 0%;
+}
+
+.right {
+    font-family: 'Jost', sans-serif;
+    font-style: 'jost';
+    font-size: 18px;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    gap: 4%;
+}
