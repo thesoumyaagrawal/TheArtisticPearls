@@ -5,3 +5,35 @@ justify-content: space-evenly;
 padding: 5% 13%;
 gap: 3%;
 }
+.vl-1{
+    position: fixed; /* or position: absolute; depending on your layout */
+    border-left: 0.5px solid #333333;
+    height: 100vh; /* Use viewport height to cover the entire screen */
+    left: 20%; /* Adjust the left position accordingly */
+    opacity: 0.17;
+    z-index: -1; /* Set a lower value */
+  }
+  .vl-2{
+    position: fixed; /* or position: absolute; depending on your layout */
+    border-left: 0.5px solid #333333;
+    height: 100vh; /* Use viewport height to cover the entire screen */
+    left: 40%; /* Adjust the left position accordingly */
+    opacity: 0.17;
+    z-index: -1; /* Set a lower value */
+  }
+  .vl-3{
+    position: fixed; /* or position: absolute; depending on your layout */
+    border-left: 0.1px solid #333333;
+    height: 100vh; /* Use viewport height to cover the entire screen */
+    right: 20%; /* Adjust the left position accordingly */
+    opacity: 0.17;
+    z-index: -1; /* Set a lower value */
+  }
+  .vl-4{
+    position: fixed; /* or position: absolute; depending on your layout */
+    border-left: 0.5px solid #333333;
+    height: 100vh; /* Use viewport height to cover the entire screen */
+    right: 40%; /* Adjust the left position accordingly */
+    opacity: 0.17;
+    z-index: -1; /* Set a lower value */
+  }
