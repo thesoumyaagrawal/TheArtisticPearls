@@ -3,12 +3,11 @@
 
 .backgroundimage {
     overflow: hidden;
-    position: relative; /* Change to relative to position the content inside */
+    position: relative;
     background-size: cover;
     height: 88vh;
     border-radius: 0 0 0 142px;
 }
-
 .bg-image {
     position: relative;
     overflow: hidden;
@@ -16,12 +15,10 @@
     align-items: center;
     background: url(../../assets/myPaintings/brushCover.jpg);
     background-size: cover;
-    height: 88vh;
+    height: 100%;
     animation: zoom 15s alternate infinite;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 0 0 0 142px;
-
     &:before {
         content: '';
         overflow: hidden;
@@ -36,48 +33,124 @@
         animation: zoom 15s alternate infinite;
     }
 }
-
 .content-for-background-image {
     display: block;
     position: fixed;
-    z-index: 1; 
+    z-index: 1;
     justify-content: center !important;
     align-items: center !important;
-    left: 20%; /* Adjust the left margin as needed */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
     width: 567px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     padding: auto;
     animation: none;
 }
-
 .content-heading {
-    font-size: 96px; /* Adjust font size as needed */
+    font-size: 96px;
     font-family: 'DM Serif Display', serif;
     font-style: 'DM Serif Display';
     font-weight: 300;
     line-height: 96px;
     padding: 0%;
 }
-
 .content-subheading {
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 24px;
     font-family: 'jost', serif;
     line-height: 26px;
     font-style: 'jost';
     font-weight: 300;
-    font-variant: normal;
     margin: 20px 0;
 }
-
-/* Rest of your CSS remains unchanged */
-/* Adjusted keyframes */
 @keyframes zoom {
     0% {
         transform: scale(1);
     }
     100% {
         transform: scale(1.1);
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .backgroundimage {
+        height: 230px;
+        border-radius: 0 0 0 64px;
+    }
+    .bg-image{
+        height: 230px;
+        border-radius: 0 0 0 48px;
+        &:before {
+            height: 230px;
+        }
+    }
+    .content-for-background-image {
+        left: 20%;
+        top: 50%;
+        width: 190px;
+    }
+    .content-heading {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .content-subheading {
+        font-size: 10px;
+        line-height: 12px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .backgroundimage {
+        height: 340px;
+        border-radius: 0 0 0 64px;
+    }
+    .bg-image{
+        height: 340px;
+        border-radius: 0 0 0 48px;
+        &:before {
+            height: 340px;
+        }
+    }
+    .content-for-background-image {
+        left: 20%;
+        top: 50%;
+        width: 270px;
+    }
+    .content-heading {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .content-subheading {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .backgroundimage {
+        height: 380px;
+        border-radius: 0 0 0 128px;
+    }
+    .bg-image{
+        height: 380px;
+        border-radius: 0 0 0 128px;
+        &:before {
+            height: 380px;
+        }
+    }
+    .content-for-background-image {
+        left: 20%;
+        top: 50%;
+        width: 270px;
+    }
+    .content-heading {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .content-subheading {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
     }
 }

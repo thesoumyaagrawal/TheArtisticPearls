@@ -22,9 +22,9 @@ const Home = () => {
           <CardComponent
             headingText="How to get into online sessions?"
             contentText="Immerse yourself in the world of creativity from the comfort of your
-        space. Our step-by-step guide will navigate you through the seamless
-        journey of joining our online sessions. Unleash your artistic
-        potential with just a click."
+            space. Our step-by-step guide will navigate you through the seamless
+            journey of joining our online sessions. Unleash your artistic
+            potential with just a click."
           />
           <CardComponent
             headingText="Want Your Own Custom Work ?"
@@ -36,10 +36,10 @@ const Home = () => {
           />
         </div>
         <SideCardImage />
-
         <Testimonial />
         <Typewriter />
         <BrushedImpressions />
+      
       </Scrollbars>
     </div>
   );
