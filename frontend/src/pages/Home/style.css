@@ -1,8 +1,8 @@
 .cards-class{
 display: flex;
-align-items: center;
+align-items: strech;
 justify-content: space-evenly;
-padding: 0% 13%;
+padding: 5% 13% 5% 13%;
 gap: 3%;
 }
 .vl-1{
@@ -37,3 +37,10 @@ gap: 3%;
     opacity: 0.17;
     z-index: -1; /* Set a lower value */
   }
+
+  @media only screen and (min-width: 320px) and (max-width: 990px) {
+    .cards-class{
+      display: inline-block;
+      align-items: center;
+      }
+}
