@@ -8,6 +8,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 // import { fadeIn } from "../../variants";
 import Testimonial from "../../components/HomePage/testimonial";
 import "./style.css";
+
 import Typewriter from "../../components/HomePage/Typewriter";
 import BrushedImpressions from "../../components/HomePage/BrushedImpressions";
 const Home = () => {

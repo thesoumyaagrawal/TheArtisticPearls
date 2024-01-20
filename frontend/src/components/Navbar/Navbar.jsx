@@ -3,7 +3,7 @@ import React from "react";
 import "./style.css";
 import MenuIcon from "../SVGIcons/NavbarIcon/MenuIcon";
 import CancelIcon from "../SVGIcons/NavbarIcon/CancelIcon";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const showSidebar= () =>{
     const sidebar = document.querySelector('.sidebar')
@@ -27,7 +27,7 @@ const Navbar = () => {
         <ul>
         <li><a href="#">The Artistic Pearls</a></li>
         <li className="hideOnMobile"><a href="#">Home</a></li>
-        <li className="hideOnMobile"><a href="#">About</a></li>
+        <li className="hideOnMobile"><Link to="/login">About</Link></li>
         <li className="hideOnMobile"><a href="#">Gallery</a></li>
         <li className="hideOnMobile"><a href="#">Online Classes</a></li>
         <li className="hideOnMobile"><a href="#">Contact Me</a></li>
