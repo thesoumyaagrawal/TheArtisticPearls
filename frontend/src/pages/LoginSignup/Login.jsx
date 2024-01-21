@@ -5,6 +5,7 @@ import { TextField } from "@mui/material";
 import Buttons from "../../components/General/Buttons/Buttons";
 import Arrowicon from "../../components/SVGIcons/Arrowicon";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import "./style.css";
 
 const Login = () => {
@@ -51,6 +52,7 @@ const Login = () => {
           <Arrowicon color="#CDA274" />
           </div>
         </div>
+        <Footer />
       </Scrollbars>
     </div>
   );

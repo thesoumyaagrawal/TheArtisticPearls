@@ -4,9 +4,8 @@ import Bgimage from "../../components/HomePage/backgroundimage";
 import CardComponent from "../../components/HomePage/CardComponents";
 import SideCardImage from "../../components/HomePage/SideCardImage";
 import { Scrollbars } from "react-custom-scrollbars";
-// import {motion} from 'framer-motion';
-// import { fadeIn } from "../../variants";
 import Testimonial from "../../components/HomePage/testimonial";
+import Footer from "../../components/Footer/Footer";
 import "./style.css";
 
 import Typewriter from "../../components/HomePage/Typewriter";
@@ -43,7 +42,7 @@ const Home = () => {
         <Testimonial />
         <Typewriter />
         <BrushedImpressions />
-      
+      <Footer />
       </Scrollbars>
     </div>
   );
