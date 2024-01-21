@@ -55,3 +55,59 @@
     width: 37vw;
     border-radius: 0 262px 0 96px;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 980px) {
+    .card-image-component {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-text-heading{
+        font-size: 28px;
+    }
+    .left-text-content{
+        font-size: 18px;
+    }
+    
+    .contact{
+        padding: 10% 0 10% 0;
+        display: flex;
+        gap: 5%;
+    }
+    .text-phone-number{
+        display: block;
+        color: #4d5053;
+    }
+    .contact-number{
+        font-size: 18px;
+        font-weight: 800;
+        text-align: left;
+        font-family: 'Jost', serif;
+    }
+    .contact-number-description{
+        font-size: 14px;
+        font-weight: 400;
+        text-align: justify;
+        font-family: 'Jost', serif;
+    }
+    .right{
+        justify-content: center;
+        align-items: center;
+    }
+    .right-card-image-component {
+        position: relative;
+        overflow: hidden;
+        height: 48vh;
+        width: 100%;
+        margin: 10% auto;
+        border-radius: 0 96px 0 48px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ 
+}
