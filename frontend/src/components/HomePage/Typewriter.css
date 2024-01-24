@@ -3,9 +3,50 @@
 .animated-typing{
   color: #333333;
   font-family: 'Dancing Script', cursive;
-  font-size: 84px;
+  font-size: 72px;
   align-items: center;
+  text-align: center;
+  margin: 0 13%;
   margin-top: 10% ;
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 370px) {
+  .animated-typing{
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 371px) and (max-width: 479px) {
+  .animated-typing{
+    font-size: 42px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+    .animated-typing{
+      font-size: 48px;
+    }
+  }
+
+@media only screen and (min-width: 581px) and (max-width: 638px) {
+      .animated-typing{
+        font-size: 52px;
+      }
+}
+@media only screen and (min-width: 639px) and (max-width: 840px) {
+  .animated-typing{
+    font-size: 70px;
+  }
+}
+
+@media only screen and (min-width: 1320px) {
+    .animated-typing{
+      font-size: 82px;
+    }
+}
+
+
+/* 2 int l and 10^18 xor in b/w l and r inclusive and. */
+

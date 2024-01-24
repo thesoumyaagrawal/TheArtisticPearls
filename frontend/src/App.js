@@ -2,6 +2,7 @@ import './App.css';
 // import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import LoginSignup from './pages/LoginSignup/Login.jsx';
+import About from './pages/About/About';
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,7 +23,7 @@ function App() {
                 <Route index element={<LoginSignup />} /> 
                 <Route path="/home" element={<Home />} /> 
                 <Route path="/login" element={<LoginSignup />} /> 
-              
+                <Route path="/about" element={<About />} /> 
 
                 {/* If any route mismatches the upper 
       route endpoints then, redirect triggers 

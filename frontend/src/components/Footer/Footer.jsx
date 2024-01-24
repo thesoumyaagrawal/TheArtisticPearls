@@ -1,4 +1,8 @@
 import React from 'react'
+import LinkedInIcon from '../SVGIcons/FooterIcon/LinkedInIcon';
+import InstagramIcon from '../SVGIcons/FooterIcon/InstagramIcon';
+import TwitterIcon from '../SVGIcons/FooterIcon/TwitterIcon';
+import FacebookIcon from '../SVGIcons/FooterIcon/FacebookIcon';
 import './style.css';
 
 const Footer = () => {
@@ -10,10 +14,10 @@ const Footer = () => {
       <div className='Footer-body-Comapny-Heading'>The Artistic Pearls</div>
       <div className='Footer-body-Company-subheading'>Where Art is not just created but crafted with Passion and Purpose.</div>
       <div className='Footer-body-social-links'>
-      <a href='#Facebook'>Ins</a>
-      <a href='#twitter'>Tw</a>
-      <a href='#linkedin'>Li</a>
-      <a href='instagram'>In</a>
+      <a href='#Facebook'> <FacebookIcon /> </a>
+      <a href='#twitter'> <TwitterIcon/> </a>
+      <a href='#linkedin'><LinkedInIcon /></a>
+      <a href='instagram'><InstagramIcon/></a>
       </div>
       </div>
 

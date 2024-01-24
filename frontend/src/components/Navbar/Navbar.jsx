@@ -19,18 +19,20 @@ const Navbar = () => {
         <ul className="sidebar">
           <li onClick={hideSidebar}><a href="#"> <CancelIcon /> </a></li>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><Link to="/about">About</Link></li>
           <li><a href="#">Gallery</a></li>
           <li><a href="#">Online Classes</a></li>
           <li><a href="#">Contact Me</a></li>
+          <li><a href="#">LogOut</a></li>
         </ul>
         <ul>
         <li><a href="#">The Artistic Pearls</a></li>
-        <li className="hideOnMobile"><a href="#">Home</a></li>
-        <li className="hideOnMobile"><Link to="/login">About</Link></li>
+        <li className="hideOnMobile"><Link to="/home">Home</Link></li>
+        <li className="hideOnMobile"><Link to="/about">About</Link></li>
         <li className="hideOnMobile"><a href="#">Gallery</a></li>
         <li className="hideOnMobile"><a href="#">Online Classes</a></li>
         <li className="hideOnMobile"><a href="#">Contact Me</a></li>
+        <li className="hideOnMobile"><Link to="/login">Logout</Link></li>
         <li className="menu-button" onClick={showSidebar}><a href="#"><MenuIcon /></a></li>
       </ul>
       </nav>
