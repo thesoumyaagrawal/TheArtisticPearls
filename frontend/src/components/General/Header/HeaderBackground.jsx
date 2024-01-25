@@ -1,14 +1,14 @@
 import React from 'react';
 import './HeaderBackground.css'
 
-const HeaderBackground = () => {
+const HeaderBackground =  ({ heading = 'Login', content = 'For those who are already our user!' }) => {
       return (
         <div>
         <div className="coverbackgroundimage">
           <div className="coverbg-image">
             <div className="covercontent-for-background-image">
-            <div className='cover-heading'>Login</div>
-            <div className="coverheading-content">For those who are already our user!</div>
+            <div className='cover-heading'>{heading}</div>
+            <div className="coverheading-content">{content}</div>
           </div>
         </div>
         </div>
