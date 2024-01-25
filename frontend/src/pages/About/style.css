@@ -17,12 +17,14 @@
     border-radius: 16px;
 }
 .about-div-component-text{
-    font-size: 28px;
+    font-size: 24px;
+    font-style: italic;
     line-height: 30px;
-    text-align: justify;
+    text-align: center;
     align-items: center;
-    font-family: 'jost', serif;
-    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+    font-style: 'DM Serif Display';
+    font-weight:200;
     color: #333333;
 }    
 .about-div-component-artist-name{
@@ -36,17 +38,21 @@
 }
 .about-card-artist-component{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
     margin: 10% 13%;
 }
 .about-card-artist-message{
    color: #333333;
+   width: 70%; 
+   padding-right: 5%;
    display: inline-block;
    background-color: #FFFFFF;
    text-align: justify;
 }
 .about-card-artist-message-heading{
-    font-size: 32px;
+    font-size: 50px;
     line-height: 30px;
     align-items: center;
     font-family: 'DM Serif Display', serif;
@@ -54,11 +60,26 @@
     font-weight: 400;
 }
 .about-card-artist-message-content{
-    padding-top: 2%;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 5%;
     text-align: justify;
     font-family: 'jost', serif;
     align-items: center;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.about-right-card-image-component{
+    position: relative;
+    overflow: hidden;
+    background: url(../../assets/team/artist.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 450px;
+    border-radius: 32px;
+}
+
+.about-team-introduction-card{
+    background-color: #F4F0EC;
+    height: 75vh;
 }

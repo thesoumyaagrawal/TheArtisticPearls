@@ -26,7 +26,6 @@ const About = () => {
             <div className="about-div-component-artist-name">– Aristotle</div>
           </div>
         </div>
-
         <div className="about-card-artist-component">
           <div className="about-card-artist-message">
             <div className="about-card-artist-message-heading">
@@ -59,19 +58,17 @@ const About = () => {
               As a passionate artist, I not only create but also love to share
               my artistry with others through engaging demonstrations. The joy
               of inspiring and fostering a love for art in others is at the
-              heart of what we do at The Artistic Pearls. Our commitment is to
-              redefine the conventional notions of art, where innovation meets
-              expression. We believe that art has the power to transform spaces,
-              evoke emotions, and tell stories that resonate with the soul.
-              <br />
-              <br />
-              Join us on this artistic journey, where every stroke is a brush
-              with life, and every canvas is a world waiting to be explored.
-              Welcome to The Artistic Pearls, where art is not just created; it
-              comes alive.
+              heart of what we do at The Artistic Pearls. Join us on this
+              artistic journey, where every stroke is a brush with life, and
+              every canvas is a world waiting to be explored. Welcome to The
+              Artistic Pearls, where art is not just created but crafted with a passion and purpose.
             </div>
           </div>
-          <div className="about-card-artist-image"></div>
+          <div className="about-right-card-image-component"></div>
+        </div>
+         
+        <div className="about-team-introduction-card">
+        
         </div>
         <Footer />
       </Scrollbars>
