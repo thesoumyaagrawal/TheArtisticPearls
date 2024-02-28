@@ -1,8 +1,9 @@
 import './App.css';
 // import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
-import LoginSignup from './pages/LoginSignup/Login.jsx';
+import Login from './pages/Login/Login.jsx';
 import About from './pages/About/About';
+import Signup from './pages/Signup/Signup.jsx';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,11 +21,11 @@ function App() {
       with exact path "/", in component props 
       we passes the imported component*/}
       {/*by default page will be home page*/}
-                <Route index element={<LoginSignup />} /> 
+                <Route index element={<Login />} /> 
                 <Route path="/home" element={<Home />} /> 
-                <Route path="/login" element={<LoginSignup />} /> 
+                <Route path="/login" element={<Login />} /> 
                 <Route path="/about" element={<About />} /> 
-
+                <Route path="/signup" element={<Signup />} /> 
                 {/* If any route mismatches the upper 
       route endpoints then, redirect triggers 
       and redirects app to home component with to="/" */}

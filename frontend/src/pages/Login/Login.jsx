@@ -49,7 +49,9 @@ const Login = () => {
           </Link>
           </div>
           <div className="login-background-body-text">Don't Have an account click in the arrow
+          <Link to="/signup">  
           <Arrowicon color="#CDA274" />
+          </Link>
           </div>
         </div>
         <Footer />
