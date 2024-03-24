@@ -7,9 +7,10 @@ import { Scrollbars } from "react-custom-scrollbars";
 import Testimonial from "../../components/HomePage/testimonial";
 import Footer from "../../components/Footer/Footer";
 import "./style.css";
-
 import Typewriter from "../../components/HomePage/Typewriter";
 import BrushedImpressions from "../../components/HomePage/BrushedImpressions";
+import {motion} from 'framer-motion';
+import { fadeIn } from "../../variants";
 const Home = () => {
   return (
     <div>
@@ -20,8 +21,13 @@ const Home = () => {
       <Scrollbars style={{ height: "100vh" }}>
         <Navbar />
         <Bgimage />
-        <div 
-        className="cards-class">
+        <motion.div
+        variants={fadeIn("up", 0.7)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3}}
+        className="cards-class"
+      >
           <CardComponent
             headingText="How to get into online sessions?"
             contentText="Immerse yourself in the world of creativity from the comfort of your
@@ -37,7 +43,7 @@ const Home = () => {
             headingText="Gifts Ideas for your Loved Ones"
             contentText="Discover the perfect blend of emotion and artistry with our curated collection – thoughtful and amazing gifts that speak volumes. Unwrap the joy of expression and, surprise your loved ones with a touch of artistic magic."
           />
-        </div>
+          </motion.div>
         <SideCardImage />
         <Testimonial />
         <Typewriter />

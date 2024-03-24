@@ -17,7 +17,7 @@ const Footer = () => {
       <a href='#Facebook'> <FacebookIcon /> </a>
       <a href='#twitter'> <TwitterIcon/> </a>
       <a href='#linkedin'><LinkedInIcon /></a>
-      <a href='instagram'><InstagramIcon/></a>
+      <a href='#instagram'><InstagramIcon/></a>
       </div>
       </div>
 
@@ -27,7 +27,6 @@ const Footer = () => {
       <div className='Footer-body-col-content'> About the Artist</div>
       <div className='Footer-body-col-content'>Online Classes</div>
       <div className='Footer-body-col-content'>Gallery</div>
-      <div className='Footer-body-col-content'>Blogs</div>
       <div className='Footer-body-col-content'>Contact Me</div>
       </div>
 

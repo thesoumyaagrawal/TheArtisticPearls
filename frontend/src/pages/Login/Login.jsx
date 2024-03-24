@@ -6,6 +6,8 @@ import Buttons from "../../components/General/Buttons/Buttons";
 import Arrowicon from "../../components/SVGIcons/Arrowicon";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
+import {motion} from 'framer-motion';
+import { fadeIn } from "../../variants";
 import "./style.css";
 
 const Login = () => {
@@ -16,9 +18,17 @@ const Login = () => {
       <Scrollbars style={{ height: "100vh" }}>
         <HeaderBackground />
         <div className="login-background-card">
-          <div className="CHeading">
-            Hello! Welcome Again to the Artistic Pearls
-          </div>
+          <motion.div
+          variants={fadeIn("up", 0.7)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.3}}
+          className="CHeading"
+        >
+          Hello! Welcome Again to the Artistic Pearls
+        </motion.div>
+         
+          
           <div className="login-background-body">
             <TextField
               id="standard-basic"
