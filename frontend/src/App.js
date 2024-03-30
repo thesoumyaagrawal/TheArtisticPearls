@@ -5,6 +5,7 @@ import Login from './pages/Login/Login.jsx';
 import About from './pages/About/About';
 import Signup from './pages/Signup/Signup.jsx';
 import Contact from './pages/Contact/Contact.jsx';
+import Gallery from './pages/Gallery/Gallery.jsx';
 import {
   BrowserRouter as Router,
   Routes,
@@ -27,7 +28,8 @@ function App() {
                 <Route path="/login" element={<Login />} /> 
                 <Route path="/about" element={<About />} /> 
                 <Route path="/signup" element={<Signup />} /> 
-                <Route path="/contact" element={<Contact />} /> 
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/gallery" element={<Gallery />} />  
                 {/* If any route mismatches the upper 
       route endpoints then, redirect triggers 
       and redirects app to home component with to="/" */}

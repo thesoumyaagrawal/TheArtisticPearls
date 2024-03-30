@@ -39,7 +39,7 @@
     align-items: center !important;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
-    height: 14vh;
+    height: 24vh;
     margin: 0 auto;
     width: 22%;
     padding: 16px;
@@ -61,7 +61,7 @@
 .coverheading-content{
      justify-content: center !important;
     align-items: center !important;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'jost', serif;
     font-style: 'jost';
     font-weight: 200;

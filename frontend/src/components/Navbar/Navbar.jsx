@@ -20,7 +20,7 @@ const Navbar = () => {
           <li onClick={hideSidebar}><a href="#"> <CancelIcon /> </a></li>
           <li><a href="/home">Home</a></li>
           <li><Link to="/about">About</Link></li>
-          <li><a href="#">Gallery</a></li>
+          <li><a href="/gallery">Gallery</a></li>
           <li><a href="#">Online Classes</a></li>
           <li><a href="/contact">Contact Me</a></li>
           <li><a href="/login">LogOut</a></li>
@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><a href="#">The Artistic Pearls</a></li>
         <li className="hideOnMobile"><Link to="/home">Home</Link></li>
         <li className="hideOnMobile"><Link to="/about">About</Link></li>
-        <li className="hideOnMobile"><a href="#">Gallery</a></li>
+        <li className="hideOnMobile"><a href="/gallery">Gallery</a></li>
         <li className="hideOnMobile"><a href="#">Online Classes</a></li>
         <li className="hideOnMobile"><a href="/contact">Contact Me</a></li>
         <li className="hideOnMobile"><Link to="/login">Logout</Link></li>
