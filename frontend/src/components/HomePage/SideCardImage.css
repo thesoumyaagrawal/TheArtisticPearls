@@ -55,8 +55,8 @@
     overflow: hidden;
     background: url(../../assets/myPaintings/buddha_Mandala.jpg);
     background-size: cover;
-    height: 80%;
-    width: 37vw;
+    height: 64%;
+    width: 28vw;
     border-radius: 0 262px 0 96px;
 }
 @media only screen and (min-width: 310px) and (max-width: 410px),
