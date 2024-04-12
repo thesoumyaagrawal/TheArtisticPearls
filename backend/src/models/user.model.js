@@ -34,13 +34,11 @@ const userSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref:"payment_information" //abhi create nahi kiya hai lekin as a foreign key create kar diya hai 
         }
-    ]
-    ratings:[
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref:"reviews"
-        }
     ],
+    ratings:[{
+            type: mongoose.Schema.Types.ObjectId,
+            ref:"ratings",
+    }],
     reviews:[
         {
             type: mongoose.Schema.Types.ObjectId,
