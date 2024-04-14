@@ -1,6 +1,7 @@
 export const acrylic_painting=[
     {
-        "imageUrl":"https://drive.google.com/file/d/1KkCJu5uWn-B5YwH4IGEWUkH99xEWeYHc/view?usp=drive_link",
+        // "imageUrl":https://drive.google.com/file/d/1KkCJu5uWn-B5YwH4IGEWUkH99xEWeYHc/view?usp=drive_link,
+        "imageUrl":"https://i.ibb.co/cbTccJB/image-emily.jpg",
         "title":"Hello",
         "type":"",
         "discountedPrice":"",
@@ -12,7 +13,7 @@ export const acrylic_painting=[
         "description":"asdfghjkwertyuio"
     },
     {
-        "imageUrl":"https://drive.google.com/file/d/1Zd9zW9vUhOJLfgrWZzGiuF7LWfAND2Hz/view?usp=drive_link",
+        "imageUrl":"https://i.ibb.co/cbTccJB/image-emily.jpg",
         "title":"hghh",
         "type":"",
         "discountedPrice":"",
@@ -24,7 +25,7 @@ export const acrylic_painting=[
         "description":"asdfghjkwertyuio"
     },
     {
-        "imageUrl":"https://drive.google.com/file/d/15x_CDBkvm0n8vU3U2Hrd08S0GaMivzNO/view?usp=drive_link",
+        "imageUrl":"https://i.ibb.co/cbTccJB/image-emily.jpg",
         "title":"jhvhj",
         "type":"",
         "discountedPrice":"",

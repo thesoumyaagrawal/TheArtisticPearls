@@ -6,7 +6,7 @@ return (
       <div className="h-[13rem] w-[10rem]">
         <img
           className="object-cover object-top"
-          src = {product.imageUrl}
+          src ={product.imageUrl}
           alt="test"
         />
       </div>
@@ -18,3 +18,6 @@ return (
   );
 };
 export default HomeSectionCard;
+
+
+
