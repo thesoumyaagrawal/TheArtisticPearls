@@ -1,14 +1,9 @@
 import React from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/20/solid";
+import {ChevronDownIcon,FunnelIcon,MinusIcon,PlusIcon,Squares2X2Icon,} from "@heroicons/react/20/solid";
 import ProductCard from './ProductCard';
 import acrylic_painting from '../../Data/acrylic_painting.js'
 
@@ -19,24 +14,17 @@ const sortOptions = [
   { name: "Price: Low to High", href: "#", current: false },
   { name: "Price: High to Low", href: "#", current: false },
 ];
-const subCategories = [
-  { name: "Totes", href: "#" },
-  { name: "Backpacks", href: "#" },
-  { name: "Travel Bags", href: "#" },
-  { name: "Hip Bags", href: "#" },
-  { name: "Laptop Sleeves", href: "#" },
-];
 const filters = [
   {
     id: "color",
     name: "Color",
     options: [
-      { value: "white", label: "White", checked: false },
-      { value: "beige", label: "Beige", checked: false },
-      { value: "blue", label: "Blue", checked: true },
-      { value: "brown", label: "Brown", checked: false },
-      { value: "green", label: "Green", checked: false },
-      { value: "purple", label: "Purple", checked: false },
+      { label: "Acrylic Painting", value: "acrylic", checked: false },
+      { label: "Canvas Painting", value: "canvas", checked: false },
+      { label: "Abstract Painting", value: "abstract", checked: false },
+      { label: "Traditional Art", value: "traditional", checked: false },
+      { label: "Still-Life Painting", value: "stilllife", checked: false },
+      { label: "Landscape Painting", value: "landscape", checked: false },
     ],
   },
   {
@@ -50,24 +38,37 @@ const filters = [
       { value: "accessories", label: "Accessories", checked: false },
     ],
   },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
-    ],
-  },
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 const ProductDisplay = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    const location=useLocation()
+    const navigate=useNavigate()
+
+    const handleFilter=(value, sectionId)=>{
+      const searchParams=new URLSearchParams(location.search)
+
+      let filterValue=searchParams.getAll(sectionId)
+
+      if(filterValue.length>0 && filterValue[0].split(",").includes(value)){
+        filterValue=filterValue[0].split(",").filter((item)=>item!==value);
+
+        if(filterValue.length===0){
+          searchParams.delete(sectionId)
+        }
+      }
+      else{
+        filterValue.push(value)
+      }
+      if(filterValue.length>0){
+        searchParams.set(sectionId,filterValue.join(","));
+      }
+      const query=searchParams.toString();
+      navigate({search: `?${query}`})
+    }
+
   return (
     <div>
       <div className="bg-white">
@@ -118,18 +119,6 @@ const ProductDisplay = () => {
 
                     {/* Filters */}
                     <form className="mt-4 border-t border-gray-200">
-                      <h3 className="sr-only">Categories</h3>
-                      <ul
-                        className="px-2 py-3 font-medium text-gray-900"
-                      >
-                        {subCategories.map((category) => (
-                          <li key={category.name}>
-                            <a href={category.href} className="block px-2 py-3">
-                              {category.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
 
                       {filters.map((section) => (
                         <Disclosure
@@ -162,10 +151,7 @@ const ProductDisplay = () => {
                               <Disclosure.Panel className="pt-6">
                                 <div className="space-y-6">
                                   {section.options.map((option, optionIdx) => (
-                                    <div
-                                      key={option.value}
-                                      className="flex items-center"
-                                    >
+                                    <div key={option.value} className="flex items-center">
                                       <input
                                         id={`filter-mobile-${section.id}-${optionIdx}`}
                                         name={`${section.id}[]`}
@@ -195,11 +181,9 @@ const ProductDisplay = () => {
             </Dialog>
           </Transition.Root>
 
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <main className="px-4 sm:px-6 lg:px-20">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                New Arrivals
-              </h1>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900"> New Arrivals</h1>
 
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">
@@ -273,16 +257,7 @@ const ProductDisplay = () => {
               <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                 {/* Filters */}
                 <form className="hidden lg:block">
-                  <h3 className="sr-only">Categories</h3>
-                  <ul
-                    className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
-                  >
-                    {subCategories.map((category) => (
-                      <li key={category.name}>
-                        <a href={category.href}>{category.name}</a>
-                      </li>
-                    ))}
-                  </ul>
+
 
                   {filters.map((section) => (
                     <Disclosure
@@ -315,11 +290,9 @@ const ProductDisplay = () => {
                           <Disclosure.Panel className="pt-6">
                             <div className="space-y-4">
                               {section.options.map((option, optionIdx) => (
-                                <div
-                                  key={option.value}
-                                  className="flex items-center"
-                                >
+                                <div key={option.value} className="flex items-center">
                                   <input
+                                    onChange={()=>handleFilter(option.value,section.id)}
                                     id={`filter-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
                                     defaultValue={option.value}
@@ -346,7 +319,7 @@ const ProductDisplay = () => {
                 {/* Product grid */}
                 <div className="lg:col-span-3 w-full">
                   <div className='flex flex-wrap justify-center bg-white py-5'>
-                  {acrylic_painting.map((item)=> <ProductCard/>)}
+                  {acrylic_painting.map((item)=> <ProductCard product={item}/>)}
                   </div>
                 </div>
               </div>
