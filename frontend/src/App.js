@@ -7,6 +7,7 @@ import Signup from './pages/Signup/Signup.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import Gallery from './pages/Gallery/Gallery.jsx';
 import Product from './pages/Product/Product.jsx';
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx';
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/product" element={<Product />} />    
+                <Route path="/productdetail" element={<ProductDetails />} />    
                 {/* If any route mismatches the upper 
       route endpoints then, redirect triggers 
       and redirects app to home component with to="/" */}

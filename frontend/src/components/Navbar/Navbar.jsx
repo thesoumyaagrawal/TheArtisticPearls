@@ -23,6 +23,7 @@ const Navbar = () => {
           <li><a href="/gallery">Gallery</a></li>
           <li><a href="/product">Products</a></li>
           <li><a href="/contact">Contact Me</a></li>
+          <li><a href="/productdetail">Product Detail</a></li>
           <li><a href="/login">LogOut</a></li>
         </ul>
         <ul>
@@ -32,6 +33,7 @@ const Navbar = () => {
         <li className="hideOnMobile"><a href="/gallery">Gallery</a></li>
         <li className="hideOnMobile"><a href="/product">Products</a></li>
         <li className="hideOnMobile"><a href="/contact">Contact Me</a></li>
+        <li className="hideOnMobile"><Link to="/productdetail">Product Detail</Link></li>
         <li className="hideOnMobile"><Link to="/login">Logout</Link></li>
         <li className="menu-button" onClick={showSidebar}><a href="#"><MenuIcon /></a></li>
       </ul>

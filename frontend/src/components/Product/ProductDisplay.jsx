@@ -16,8 +16,8 @@ const sortOptions = [
 ];
 const filters = [
   {
-    id: "color",
-    name: "Color",
+    id: "category",
+    name: "Category",
     options: [
       { label: "Acrylic Painting", value: "acrylic", checked: false },
       { label: "Canvas Painting", value: "canvas", checked: false },
@@ -27,17 +27,7 @@ const filters = [
       { label: "Landscape Painting", value: "landscape", checked: false },
     ],
   },
-  {
-    id: "category",
-    name: "Category",
-    options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
-    ],
-  },
+
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -181,9 +171,9 @@ const ProductDisplay = () => {
             </Dialog>
           </Transition.Root>
 
-          <main className="px-4 sm:px-6 lg:px-20">
-            <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900"> New Arrivals</h1>
+          <main className="px-0 sm:px-0 lg:px-16">
+            <div className="flex items-baseline justify-between border-b border-gray-200 pb-3 pt-8">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900">Shop Now</h1>
 
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">

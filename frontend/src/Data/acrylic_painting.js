@@ -1,12 +1,40 @@
 export const acrylic_painting = [
         {
-            "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/top/8/t/m/xxl-amrcrochetlacetop-madstitches-apparels-private-limited-original-imagr39r3kfmb5vy.jpeg?q=70",
-            "brand": "Madstitches Apparels Private Limited",
-            "title": "Party Regular Sleeves Floral Print, Printed Women White...",
+            "imageUrl": "https://i.imghippo.com/files/tyLRi1713425356.jpg",
+            "brand": "RadhaKrishna The love Saga",
+            "title": "Acrylic Painting on Canvas",
             "color": "white",
-            "discountedPrice": 449,
-            "price": 2500,
-            "discountPercent": 80,
+            "discountedPrice": 8000,
+            "price": "",
+            "discountPercent": "",
+            "size": [
+                {
+                  "name": "S",
+                  "quantity": 20
+                },
+                {
+                  "name": "M",
+                  "quantity": 30
+                },
+                {
+                  "name": "L",
+                  "quantity": 50
+                }
+              ],
+              "quantity": 100,
+              "topLavelCategory": "Women",
+              "secondLavelCategory": "Clothing",
+              "thirdLavelCategory": "top",
+              "description":""
+        },
+        {
+            "imageUrl": "https://i.imghippo.com/files/AgrW91713425397.jpg",
+            "brand": "Abstract Light of Calmness",
+            "title": "Abstract Acrylic Painting",
+            "color": "white",
+            "discountedPrice": 4800,
+            "price": "₹6000",
+            "discountPercent": "20% Off",
             "size": [
                 {
                   "name": "S",
@@ -28,41 +56,13 @@ export const acrylic_painting = [
               "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
         },
         {
-            "imageUrl": "https://rukminim1.flixcart.com/image/612/612/kflftzk0/top/q/t/m/l-aw-2081w-aelomart-original-imafwyzhw8t2npsk.jpeg?q=70",
-            "brand": "Aelomart",
-            "title": "Casual Regular Sleeves Solid Women White Top",
+            "imageUrl": "https://i.imghippo.com/files/bO7Sz1713424983.jpg",
+            "brand": "The Green Splash",
+            "title": "Ink Colour Painting",
             "color": "white",
-            "discountedPrice": 499,
-            "price": 1599,
-            "discountPercent": 60,
-            "size": [
-                {
-                  "name": "S",
-                  "quantity": 20
-                },
-                {
-                  "name": "M",
-                  "quantity": 30
-                },
-                {
-                  "name": "L",
-                  "quantity": 50
-                }
-              ],
-              "quantity": 100,
-              "topLavelCategory": "Women",
-              "secondLavelCategory": "Clothing",
-              "thirdLavelCategory": "top",
-              "description":"A traditional garment embodying elegance and grace. Crafted from fine fabrics, it features intricate embroidery and a relaxed fit, providing comfort and style."
-        },
-        {
-            "imageUrl": "https://rukminim1.flixcart.com/image/612/612/ke1pnrk0/top/p/p/z/xl-tttp003846-tokyo-talkies-original-imafutjsuhhacuev.jpeg?q=70",
-            "brand": "Tokyo Talkies",
-            "title": "Casual Regular Sleeves Solid Women White Top",
-            "color": "white",
-            "discountedPrice": 419,
-            "price": 1049,
-            "discountPercent": 60,
+            "discountedPrice": 400,
+            "price": "",
+            "discountPercent": "",
             "size": [
                 {
                   "name": "S",
