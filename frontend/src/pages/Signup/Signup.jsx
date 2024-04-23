@@ -7,7 +7,38 @@ import Arrowicon from "../../components/SVGIcons/Arrowicon";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import "./style.css";
+import { useState } from "react";
+import axios from "axios";
+
 const Signup = () => {
+
+  const url = "http://localhost:5454";
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    setInputs((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const sendRequest = async (type = "login") => {
+    const res = await axios
+      .post(url+`/api/user/${type}`, {
+        name: inputs.name,
+        email: inputs.email,
+        password: inputs.password,
+      })
+      .catch((err) => console.log(err));
+
+    const data = await res.data;
+    console.log(data);
+    return data;
+  };
+
+  const [isSignup, setIsSignup] = useState(false);
   return (
     <div>
       <div className="vl-1"> </div>

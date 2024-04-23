@@ -8,6 +8,7 @@ import Contact from './pages/Contact/Contact.jsx';
 import Gallery from './pages/Gallery/Gallery.jsx';
 import Product from './pages/Product/Product.jsx';
 import ProductDetails from './components/ProductDetails/ProductDetails.jsx';
+import Cart from './components/Cart/Cart.jsx';
 import {
   BrowserRouter as Router,
   Routes,
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/product" element={<Product />} />    
+                <Route path="/cart" element={<Cart />} />    
                 <Route path="/productdetail" element={<ProductDetails />} />    
                 {/* If any route mismatches the upper 
       route endpoints then, redirect triggers 

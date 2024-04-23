@@ -6,6 +6,7 @@ import Rating from "@mui/material/Rating";
 import Grid from '@mui/material/Grid';
 import Footer from "../Footer/Footer";
 import  ProductReviewCard from "./ProductReviewCard";
+import Navbar from "../../components/Navbar/Navbar";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -51,7 +52,9 @@ const ProductDetails = () => {
   //const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
   return (
     <div>
+    
       <div className="bg-white">
+      <Navbar />
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
             <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
