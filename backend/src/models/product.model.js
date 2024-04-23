@@ -22,13 +22,6 @@ const productSchema=new mongoose.Schema({
     brand:{
         type: String,
     },
-    color:{
-        type: String,
-    },
-    sizes: [{
-        name: {type: String},
-        quantity: {type: Number}
-    }],
     imageUrl:{
         type: String,
     },
