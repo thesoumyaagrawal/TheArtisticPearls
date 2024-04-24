@@ -10,11 +10,13 @@ import {motion} from 'framer-motion';
 import { fadeIn } from "../../variants";
 import "./style.css";
 
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 
 const Login = () => {
-
+  const navigate = useNavigate();
   const url = "http://localhost:5454";
   const [inputs, setInputs] = useState({
     name: "",
@@ -28,7 +30,6 @@ const Login = () => {
     }));
   };
   const sendRequest = async (type = "login") => {
-    console.log("hello");
     const res = await axios
       .post(url+`/auth/signin`, {
         name: inputs.name,
@@ -45,7 +46,8 @@ const Login = () => {
     e.preventDefault();
     console.log(inputs);
       sendRequest()
-        .then((data)=>alert(data))
+        .then((data)=>alert(data.message))
+        .then(()=>navigate("/home"))
         .then((data) => console.log(data));
   };
 

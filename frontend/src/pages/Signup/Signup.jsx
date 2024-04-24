@@ -10,8 +10,10 @@ import "./style.css";
 import { useState } from "react";
 import axios from "axios";
 
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
 
+  const navigate = useNavigate();
   const url = "http://localhost:5454";
   const [inputs, setInputs] = useState({
     name: "",
@@ -24,9 +26,9 @@ const Signup = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  const sendRequest = async (type = "login") => {
+  const sendRequest = async (type = "signin") => {
     const res = await axios
-      .post(url+`/api/user/${type}`, {
+      .post(url+`/auth/signup`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,
@@ -37,8 +39,15 @@ const Signup = () => {
     console.log(data);
     return data;
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(inputs);
+      sendRequest()
+        .then((data)=>alert(data.message))
+        .then(()=>navigate("/login"))
+        .then((data) => console.log(data));
+  };
 
-  const [isSignup, setIsSignup] = useState(false);
   return (
     <div>
       <div className="vl-1"> </div>
@@ -58,6 +67,9 @@ const Signup = () => {
                   <TextField
                     id="standard-basic"
                     label="Enter a User Name"
+                    name="name"
+                    value={inputs.name}
+                    onChange={handleChange}
                     variant="standard"
                     fullWidth="true"
                   />
@@ -68,6 +80,9 @@ const Signup = () => {
                     label="Enter Your Email-ID"
                     variant="standard"
                     fullWidth="true"
+                    name="email"
+                    value={inputs.email}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -78,6 +93,9 @@ const Signup = () => {
                     label="Select a Password"
                     variant="standard"
                     fullWidth="true"
+                    name="password"
+                    value={inputs.password}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="signin-background-body">
@@ -92,17 +110,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="signin-background-button-body">
-            <Link to="/home">
-              <Buttons
-                buttonText="signin Now"
-                textColor="#FFFFFF"
-                buttonColor="#292F36"
-                height="64px"
-                width="238px"
-                EndIconComponent={() => <Arrowicon color="#FFFFFF" />}
-                borderRadius="18px"
-              />
-            </Link>
+              <button onClick={handleSubmit}>SignUp</button>
           </div>
           <div className="signin-background-body-text">
             Already have an account, Click in the arrow.
