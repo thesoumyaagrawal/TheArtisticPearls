@@ -18,11 +18,10 @@ const register = async(req,res)=>{
     // } catch (error) {
     //     return res.status(500).send({error:error.message});
     // }
-
     const {name,email,password}=req.body;
     let existingUser;
     try{
-        existingUser= await User.findOne({email});
+        existingUser= await User.findOne({name});
     } 
     catch(err)
     {
@@ -42,8 +41,8 @@ const register = async(req,res)=>{
     catch(err){
         return console.log(err);
     }
-    await cartService.createCart(user);
-    return res.status(201).json({user});
+    // await cartService.createCart(user);
+    return res.status(201).json({message:"registered successfully, you can login now", user: existingUser});;
 }
 
 // const login = async(req,res)=>{
@@ -70,21 +69,19 @@ const register = async(req,res)=>{
 // }
 
 const login = async(req,res,next)=>{
-    console.log(req);
-    const { email,password } = req.body;
+    const { name,email,password } = req.body;
     let existingUser;
     try{
-        existingUser= await User.findOne({email});
+        existingUser= await User.findOne({name});
     } 
     catch(err)
     {
         return console.log(err);
     }
     if(!existingUser){
-        return res.status(404).json({message:"couldn't find user with this email"});
+        return res.status(404).json({message:"couldn't find user with this username"});
     }
-    const isPasswordCorrect = bcrypt.compareSync(password,existingUser.password);
-    if(!isPasswordCorrect){
+    if(password!=existingUser.password){
         return res.status(400).json({message:"password doesn't match"});
     }
     return res.status(200).json({message:"logged in successfully", user: existingUser});
