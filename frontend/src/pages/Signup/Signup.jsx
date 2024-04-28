@@ -2,7 +2,7 @@ import React from "react";
 import HeaderBackground from "../../components/General/Header/HeaderBackground";
 import { Scrollbars } from "react-custom-scrollbars";
 import { TextField } from "@mui/material";
-import Buttons from "../../components/General/Buttons/Buttons";
+//import Buttons from "../../components/General/Buttons/Buttons";
 import Arrowicon from "../../components/SVGIcons/Arrowicon";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
@@ -19,6 +19,11 @@ const Signup = () => {
     name: "",
     email: "",
     password: "",
+    streetAddress:"",
+    city:"",
+    state:"",
+    zipCode:"",
+    mobile:"",
   });
   const handleChange = (e) => {
     setInputs((prevState) => ({
@@ -107,6 +112,75 @@ const Signup = () => {
                   />
                 </div>
               </div>
+
+              <div className="signin-block-1">
+              <div className="signin-background-body">
+                <TextField
+                  id="standard-basic"
+                  label="Street Address"
+                  variant="standard"
+                  fullWidth="true"
+                  name="streetAddress"
+                  value={inputs.streetAdress}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="signin-background-body">
+                <TextField
+                  id="standard-basic"
+                  label="City Name"
+                  variant="standard"
+                  fullWidth="true"
+                  name="city"
+                  value={inputs.city}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+
+            <div className="signin-block-1">
+            <div className="signin-background-body">
+              <TextField
+                id="standard-basic"
+                label="State Name"
+                variant="standard"
+                fullWidth="true"
+                name="state"
+                value={inputs.state}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="signin-background-body">
+              <TextField
+                id="standard-basic"
+                label="Zip Code"
+                variant="standard"
+                fullWidth="true"
+                name="zipCode"
+                value={inputs.zipCode}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="signin-block-1">
+          <div className="signin-background-body">
+            <TextField
+              id="standard-basic"
+              label="Mobile No."
+              variant="standard"
+              fullWidth="true"
+              name="mobile"
+              value={inputs.mobile}
+              onChange={handleChange}
+            />
+          </div>
+          </div>
+  
+
+
+
             </div>
           </div>
           <div className="signin-background-button-body">

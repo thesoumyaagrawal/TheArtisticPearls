@@ -34,16 +34,16 @@ const CartItem = () => {
           <IconButton>
             <RemoveCircleOutlineIcon />
           </IconButton>
-          <span className="py-1 px-7 border rounded-sm">
+          <span className="py-1 px-7 border rounded-sm"> 3 </span>
             <IconButton>
               <AddCircleOutlineIcon />
             </IconButton>
-          </span>
         </div>
-        <div>
-        <Button>Remove</Button>
-        </div>
+
+        <div><Button sx={{color:"RGB(145 83 253)"}}>Remove</Button></div>
+
       </div>
+
       </div>
     </div>
   );
