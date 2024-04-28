@@ -46,8 +46,8 @@ async function findCartItemById(cartItemId){
     }
 }
 
-moudle.exports={
+module.exports={
     updateCartItem,
     removeCartItem,
-    findCartItemById
-}
+    findCartItemById,
+};

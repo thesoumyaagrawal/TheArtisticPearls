@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
-const Schema = mongoosee;
+const Schema = mongoose;
 
-const reviewSchema=new Schema({
+const reviewSchema=new mongoose.Schema({
     review:{
         type: String,
         required: true,

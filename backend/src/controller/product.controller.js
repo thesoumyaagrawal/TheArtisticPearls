@@ -1,6 +1,6 @@
 const productService = require("../services/product.service.js");
 
-const createrProduct = async (req,res)=>{
+const createProduct = async (req,res)=>{
     try {
         const product = await productService.createProduct(req.body);
         return res.status(201).send(product);
@@ -39,7 +39,7 @@ const findProductById = async(req,res)=>{
     }
 }
 
-const gellAllProducts = async(req,res)=>{
+const getAllProducts = async(req,res)=>{
     const productId = req.params.id;
     try {
         const products = await productService.getAllProducts(req.query);
@@ -65,5 +65,5 @@ module.exports={
     updateProduct,
     getAllProducts,
     createMultipleProduct,
-    findProductById
+    findProductById,
 }

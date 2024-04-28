@@ -14,7 +14,7 @@ async function createProduct(reqData){
     if(!secondLevel){
         secondLevel=new Category({
             name:reqData.secondLevelCategory,
-            parentCategory:topLevel._id
+            parentCategory:topLevel._id,
             level:2,
         })
     }
@@ -23,7 +23,7 @@ async function createProduct(reqData){
     if(!thirdLevel){
         thirdLevel=new Category({
             name:reqData.thirdLevelCategory,
-            parentCategory:secondLevel._id
+            parentCategory:secondLevel._id,
             level:3,
         })
     }
@@ -95,10 +95,10 @@ async function getAllProducts(reqQuery){
         }
     }
 
-    if(sort){
-        const sortDirection=sort==="price_high">-1:1;
-        query=query.sort({discountedPrice: sortDirection})
-    }
+    // if(sort){
+    //     const sortDirection=sort==="price_high">-1:1;
+    //     query=query.sort({discountedPrice: sortDirection})
+    // }
 
     const totalProducts = await Product.countDocuments(query);
 

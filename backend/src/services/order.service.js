@@ -1,5 +1,5 @@
 const cartService=require("../services/cart.service")
-const Address = require("../model/address.model.js");
+const Address = require("../models/address.model.js");
 
 async function createOrder(user,shippingAddress){
     let address;
@@ -91,7 +91,7 @@ async function cancelledOrder(orderId){
     return await order.save();
 }
 
-async findOrderById(orderId){
+async function findOrderById(orderId){
     const order = await Order.findById(orderId)
     .populate("user")
     .populate({path:"orderItems",populate:{path:"product"}})
@@ -117,11 +117,11 @@ async function getAllOrders(){
 }
 
 async function deleteOrder(orderId){
-    const order - await findOrderById(orderId);
+    const order = await findOrderById(orderId);
     await Order.findByIdAndDelete(order._id);
 }
 
-moudle.exports={
+module.exports={
     createOrder,
     placeOrder,
     confirmedOrder,

@@ -1,4 +1,4 @@
-const orderService = require("../services/orderService.js")
+const orderService = require("../services/order.service.js")
 
 const getAllOrders = async(req,res)=>{
     try{
@@ -39,7 +39,7 @@ const deliverOrders = async(req,res)=>{
     }
 }
 
-const cancalledOrders = async(req,res)=>{
+const cancelledOrders = async(req,res)=>{
     const orderId = req.params.orderId;
     try {
         const orders = await orderService.cancelledOrder(orderId);

@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
-const Schema = mongoosee;
+const Schema = mongoose;
 
-const ratingSchema=new Schema({
+const ratingSchema=new mongoose.Schema({
     user:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'users',

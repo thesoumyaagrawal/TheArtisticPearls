@@ -1,4 +1,4 @@
-const cartService = require("../services/vart.service.js");
+const cartService = require("../services/cart.service");
 
 const findUserCart = async(req,res)=>{
     const user = req.user;
